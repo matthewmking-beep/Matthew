@@ -1,11 +1,32 @@
 // Text-Based Adventure.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+#include "Text-Based-Adventure.h"
+
+
+//Overall Variables
+bool isPlaying;
+bool isExploring;
+std::string userCommand;
+
+void initialSetup()
+{
+
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	//Sets up the locations and characters, etc.
+	void initialsetup();
+	//Put opening blurb here.
+	std::cout << " " << std::endl;
+
+	do
+	{
+		std::cin >> userCommand;
+	} while (isPlaying);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
