@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Text-Based Adventure.cpp" />
   </ItemGroup>
   <ItemGroup>

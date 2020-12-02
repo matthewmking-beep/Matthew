@@ -1,2 +1,16 @@
-﻿  Text-Based Adventure.cpp
-  Text-Based Adventure.vcxproj -> C:\Users\Trifo\Documents\GitHub\Software-Design-Final-Project\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
+﻿  Character.cpp
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C3646: 'stats': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C3646: 'inventory': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Environment.cpp
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C3646: 'stats': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C3646: 'inventory': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Text-Based Adventure.cpp
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C3646: 'stats': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C3646: 'inventory': unknown override specifier
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\character.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
