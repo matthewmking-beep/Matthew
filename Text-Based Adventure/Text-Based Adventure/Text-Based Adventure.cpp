@@ -4,38 +4,136 @@
 #include "Text-Based-Adventure.h"
 
 
-//Overall Variables
-bool isPlaying;
-bool isExploring;
-std::string userCommand;
 
 void initialSetup()
 {
+	isPlaying = true;
+	isExploring = true;
+	hasWon = false;
+	userCommand = "list";
+	
+	//All exploring commands
+	exploringCommandList[0] = "list";
+	exploringCommandList[1] = "look";
+	exploringCommandList[2] = "inspect";
+	exploringCommandList[3] = "talk";
+	exploringCommandList[4] = "move";
+	exploringCommandList[5] = "inventory";
+	exploringCommandList[6] = "use";
+	exploringCommandList[7] = "equip";
+	exploringCommandList[8] = "endgame";
+
+	//All fighting commands
+	fightingCommandList[0] = "list";
+	fightingCommandList[1] = "attack";
+	fightingCommandList[2] = "block";
+	fightingCommandList[3] = "run";
+	fightingCommandList[4] = "endgame";
+
 
 }
 
+void exploringCommands()
+{
+	//I realize now that I cannot use a switch statement for strings... I am sad...
+	if (userCommand == "list")
+	{
+		std::cout << "Here are all the available commands: " << std::endl;
+		for (int i = 0; i < 9; i++)
+		{
+			std::cout << exploringCommandList[i] << std::endl;
+		}
+	}
+	else if (userCommand == "look")
+	{
+
+	}
+	else if (userCommand == "inspect")
+	{
+
+	}
+	else if (userCommand == "talk")
+	{
+
+	}
+	else if (userCommand == "move")
+	{
+
+	}
+	else if (userCommand == "inventory")
+	{
+
+	}
+	else if (userCommand == "use")
+	{
+
+	}
+	else if (userCommand == "equip")
+	{
+
+	}
+	else if (userCommand == "endgame")
+	{
+		isPlaying = false;
+	}
+	else
+	{
+		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << std::endl;
+	}
+}
+
+void fightingCommands()
+{
+	if (userCommand == "list")
+	{
+		std::cout << "Here are all the available commands: " << std::endl;
+		for (int i = 0; i < 5; i++)
+		{
+			std::cout << fightingCommandList[i] << std::endl;
+		}
+	}
+	else if (userCommand == "fight")
+	{
+
+	}
+	else if (userCommand == "block")
+	{
+
+	}
+	else if (userCommand == "run")
+	{
+
+	}
+	else if (userCommand == "endgame")
+	{
+		isPlaying = false;
+	}
+	else
+	{
+		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << std::endl;
+	}
+}
 
 int main()
 {
 	//Sets up the locations and characters, etc.
-	void initialsetup();
+	initialSetup();
 	//Put opening blurb here.
-	std::cout << " " << std::endl;
+	std::cout << "Welcome to 'The Castle of Mystery' text-based adventure.  In this game, you must solve puzzles, and battle monsters to try and find out what happened to the mysterious castle on the hill.\n" << std::endl;
+
+	exploringCommands();
 
 	do
 	{
 		std::cin >> userCommand;
+		if (isExploring)
+		{
+			exploringCommands();
+		}
+		else
+		{
+			fightingCommands();
+		}
 	} while (isPlaying);
 
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
