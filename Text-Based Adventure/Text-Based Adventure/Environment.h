@@ -10,4 +10,7 @@ public:
 	int NPCList;
 	int puzzleSolution;
 	int monsterList;
+	std::string description;
 };
+
+EnvironmentObject TownCreator();

@@ -2,21 +2,6 @@
 	
 #include "Text-Based-Adventure.h"
 
-<<<<<<< Updated upstream
-class Environment
-{
-public:
-	int identifier;
-	std::string description;
-	int interactable[5];
-	int moveableLocations[3];
-	int NPCList;
-	int puzzleSolution;
-	int monsterList;
-};
-=======
->>>>>>> Stashed changes
-
 
 EnvironmentObject TownCreator() {
 	EnvironmentObject Town;
