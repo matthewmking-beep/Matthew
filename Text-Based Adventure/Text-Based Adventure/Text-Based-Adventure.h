@@ -12,7 +12,7 @@ bool hasWon;
 std::string userCommand;
 
 //Command lists
-std::string exploringCommandList[9];
+std::string exploringCommandList[10];
 std::string fightingCommandList[5];
 
 //Environment Array

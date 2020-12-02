@@ -1,5 +1,27 @@
 #pragma once
-#include "Text-Based-Adventure.h"
+#include <iostream>
+#include <string>
+#include "Item.h"
+
+struct combatData
+{
+	int level;
+	int maxHealth;
+	int health;
+	int attack;
+	int defense;
+	int weak;
+};
+
+struct stuff
+{
+	itemObject equipmentList[10];
+	itemObject itemList[10];
+	itemObject questItemList[10];
+	itemObject equippedWeapon;
+	itemObject equippedArmour;
+	int gold;
+};
 
 class characterObject
 {
@@ -17,24 +39,8 @@ public:
 	int run();
 	void levelUp();
 
+	characterObject();
+	~characterObject();
+
 };
 
-struct combatData
-{
-	int level;
-	int maxHealth;
-	int health;
-	int attack;
-	int defense;
-	int weak;
-};
-
-struct stuff
-{
-	//itemObject equipmentList[];
-	//itemObject itemList[];
-	//itemObject questItemList[];
-	//itemObject equippedWeapon;
-	//itemObject equippedArmour;
-	int gold;
-};

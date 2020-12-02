@@ -1,6 +1,6 @@
 #pragma once
 	
-#include "Text-Based-Adventure.h"
+#include "Environment.h"
 
 
 EnvironmentObject TownCreator() {
@@ -13,4 +13,12 @@ EnvironmentObject TownCreator() {
 	Town.NPCList;
 
 	return Town;
+}
+
+EnvironmentObject::EnvironmentObject()
+{
+}
+
+EnvironmentObject::~EnvironmentObject()
+{
 }

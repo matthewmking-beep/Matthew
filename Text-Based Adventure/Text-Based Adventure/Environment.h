@@ -1,5 +1,6 @@
 #pragma once
-#include "Text-Based-Adventure.h"
+#include <iostream>
+#include <string>
 
 class EnvironmentObject
 {
@@ -11,6 +12,10 @@ public:
 	int puzzleSolution;
 	int monsterList;
 	std::string description;
+
+
+	EnvironmentObject();
+	~EnvironmentObject();
 };
 
 EnvironmentObject TownCreator();

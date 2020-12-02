@@ -153,11 +153,14 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Text-Based Adventure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="Environment.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Quest.h" />
     <ClInclude Include="Text-Based-Adventure.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

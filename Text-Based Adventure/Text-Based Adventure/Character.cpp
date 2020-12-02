@@ -23,3 +23,11 @@ int characterObject::run()
 void characterObject::levelUp()
 {
 }
+
+characterObject::characterObject()
+{
+}
+
+characterObject::~characterObject()
+{
+}

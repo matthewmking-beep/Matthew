@@ -21,7 +21,9 @@ void initialSetup()
 	exploringCommandList[5] = "inventory";
 	exploringCommandList[6] = "use";
 	exploringCommandList[7] = "equip";
+	exploringCommandList[9] = "quest";
 	exploringCommandList[8] = "endgame";
+	
 
 	//All fighting commands
 	fightingCommandList[0] = "list";
@@ -46,15 +48,15 @@ void exploringCommands()
 			std::cout << exploringCommandList[i] << std::endl;
 		}
 	}
-	else if (userCommand == "look")
+	else if (userCommand == "look") //Describes Area
+	{
+		std::cout << environmentArray[currentEnvironment].description << std::endl;
+	}
+	else if (userCommand == "inspect") //Inspects objects of interest
 	{
 
 	}
-	else if (userCommand == "inspect")
-	{
-
-	}
-	else if (userCommand == "talk")
+	else if (userCommand == "talk") //
 	{
 
 	}
@@ -71,6 +73,10 @@ void exploringCommands()
 
 	}
 	else if (userCommand == "equip")
+	{
+
+	}
+	else if (userCommand == "quest")
 	{
 
 	}
