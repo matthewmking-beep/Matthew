@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Character.h"
+#include "Environment.h"
 
 
 //Variables
@@ -15,7 +16,7 @@ std::string exploringCommandList[9];
 std::string fightingCommandList[5];
 
 //Environment Array
-//Environment environmentArray[5];
+EnvironmentObject environmentArray[5];
 int currentEnvironment;
 
 //Functions

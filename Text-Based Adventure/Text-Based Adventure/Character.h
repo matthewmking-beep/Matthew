@@ -13,9 +13,9 @@ public:
 	//Returns script
 	std::string talk();
 	int dealDamage();
-	int heal();
+	void heal(int healing);
 	int run();
-
+	void levelUp();
 
 };
 

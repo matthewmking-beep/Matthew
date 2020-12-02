@@ -2,6 +2,7 @@
 	
 #include "Text-Based-Adventure.h"
 
+<<<<<<< Updated upstream
 class Environment
 {
 public:
@@ -13,9 +14,12 @@ public:
 	int puzzleSolution;
 	int monsterList;
 };
+=======
+>>>>>>> Stashed changes
 
-Environment TownCreator() {
-	Environment Town;
+
+EnvironmentObject TownCreator() {
+	EnvironmentObject Town;
 
 	Town.identifier = 0;
 	Town.description = "Welcome to the Town!";
