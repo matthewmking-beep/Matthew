@@ -30,7 +30,9 @@ void initialSetup()
 	fightingCommandList[3] = "run";
 	fightingCommandList[4] = "endgame";
 
-
+	//Create All Environments
+	//environmentArray [0] = TownCreator();
+	currentEnvironment = 0;
 }
 
 void exploringCommands()
