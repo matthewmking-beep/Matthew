@@ -60,9 +60,13 @@ void exploringCommands()
 	{
 
 	}
-	else if (userCommand == "move")
+	else if (userCommand == "move") //moves player to area
 	{
-
+		std::cout << "Where would you like to go?" << std::endl;
+		for (int i = 0; i < 2; i++)
+		{
+			std::cout << environmentArray[currentEnvironment].moveableLocations[i] << std::endl;
+		}
 	}
 	else if (userCommand == "inventory")
 	{

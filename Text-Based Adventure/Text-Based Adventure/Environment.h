@@ -6,16 +6,17 @@ class EnvironmentObject
 {
 public:
 	int identifier;
-	int interactable[5];
-	int moveableLocations[3];
-	int NPCList;
-	int puzzleSolution;
-	int monsterList;
 	std::string description;
-
+	int interactable[5];
+	std::string moveableLocations[5];
+	std::string NPCList[3];
+	std::string puzzleSolution;
+	std::string monsterList[4];
 
 	EnvironmentObject();
 	~EnvironmentObject();
 };
 
 EnvironmentObject TownCreator();
+EnvironmentObject ForestCreator();
+EnvironmentObject CastleCreator();
