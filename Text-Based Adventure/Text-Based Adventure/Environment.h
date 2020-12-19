@@ -6,9 +6,9 @@ class EnvironmentObject
 {
 public:
 	int identifier;
+	std::string moveableLocations[3];
 	std::string description;
-	int interactable[5];
-	std::string moveableLocations[5];
+	std::string interactable[5];
 	std::string NPCList[3];
 	std::string puzzleSolution;
 	std::string monsterList[4];

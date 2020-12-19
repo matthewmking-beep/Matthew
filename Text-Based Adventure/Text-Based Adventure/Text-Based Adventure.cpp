@@ -33,8 +33,11 @@ void initialSetup()
 	fightingCommandList[4] = "endgame";
 
 	//Create All Environments
-	environmentArray [0] = TownCreator();
-	currentEnvironment = 0;
+	environmentArray[0] = TownCreator();
+	environmentArray[1] = ForestCreator();
+	environmentArray[2] = CastleCreator();
+//	currentEnvironment = 0;
+	currentEnvironment = environmentArray->identifier;
 }
 
 void exploringCommands()
@@ -63,10 +66,21 @@ void exploringCommands()
 	else if (userCommand == "move") //moves player to area
 	{
 		std::cout << "Where would you like to go?" << std::endl;
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			std::cout << environmentArray[currentEnvironment].moveableLocations[i] << std::endl;
+			std::cout << environmentArray[i].moveableLocations[i] << std::endl;
 		}
+
+		std::cin >> userCommand;
+
+		for (int i = 0; i < 3; i++)
+		{
+			if (userCommand == environmentArray[i].moveableLocations[i])
+			{
+				currentEnvironment = i;
+			}
+		}
+//		std::cout << currentEnvironment;
 	}
 	else if (userCommand == "inventory")
 	{
