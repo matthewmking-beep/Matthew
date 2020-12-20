@@ -81,6 +81,7 @@ void exploringCommands()
 			}
 		}
 //		std::cout << currentEnvironment;
+		std::cout << "You go to the " << environmentArray[currentEnvironment].moveableLocations[currentEnvironment] << std::endl;
 	}
 	else if (userCommand == "inventory")
 	{
