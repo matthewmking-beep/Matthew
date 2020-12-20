@@ -5,6 +5,7 @@
 #include "Environment.h"
 #include "Item.h"
 #include "Quest.h"
+using namespace std;
 
 
 //Variables
@@ -25,9 +26,13 @@ int currentEnvironment;
 characterObject Player;
 
 //Monster Array
-characterObject monsterList[10];
+characterObject monsterList[6];
+
+characterObject currentMonster;
 
 //Functions
 void initialSetup();
+void startCombat(characterObject monster);
+void enemyAI();
 void exploringCommands();
 void fightingCommands();

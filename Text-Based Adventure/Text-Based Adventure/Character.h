@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Item.h"
+using namespace std;
 
 struct combatData
 {
@@ -44,3 +45,10 @@ public:
 
 };
 
+//Creating the monsters
+characterObject monsterCreateGoblin();
+characterObject monsterCreateLizardman();
+characterObject monsterCreateGrowler();
+characterObject monsterCreateGhost();
+characterObject monsterCreateSpecter();
+characterObject monsterCreateDragon();

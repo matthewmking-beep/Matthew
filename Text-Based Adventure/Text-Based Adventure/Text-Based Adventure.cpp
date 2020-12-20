@@ -4,7 +4,6 @@
 #include "Text-Based-Adventure.h"
 
 
-
 void initialSetup()
 {
 	isPlaying = true;
@@ -38,6 +37,25 @@ void initialSetup()
 	environmentArray[2] = CastleCreator();
 //	currentEnvironment = 0;
 	currentEnvironment = environmentArray->identifier;
+
+	//Create All Monsters
+	monsterList[0] = monsterCreateGoblin();
+	monsterList[1] = monsterCreateLizardman();
+	monsterList[2] = monsterCreateGrowler();
+	monsterList[3] = monsterCreateGhost();
+	monsterList[4] = monsterCreateSpecter();
+	monsterList[5] = monsterCreateDragon();
+}
+
+void startCombat(characterObject monster)
+{
+	isExploring = false;
+	currentMonster = monster;
+}
+
+void enemyAI()
+{
+	
 }
 
 void exploringCommands()
@@ -59,14 +77,18 @@ void exploringCommands()
 	{
 
 	}
-	else if (userCommand == "talk") //
+	else if (userCommand == "talk") //Talks to NPC
 	{
-
+		cout << "Who would you like to talk to?" << endl;
+		for (int i = 0; i < environmentArray[currentEnvironment].NPCList->size; i++)
+		{
+			cout << environmentArray[currentEnvironment].NPCList[i] << endl;
+		}
 	}
 	else if (userCommand == "move") //moves player to area
 	{
 		std::cout << "Where would you like to go?" << std::endl;
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < environmentArray[currentEnvironment].moveableLocations->size; i++)
 		{
 			std::cout << environmentArray[i].moveableLocations[i] << std::endl;
 		}
@@ -83,7 +105,7 @@ void exploringCommands()
 //		std::cout << currentEnvironment;
 		std::cout << "You go to the " << environmentArray[currentEnvironment].moveableLocations[currentEnvironment] << std::endl;
 	}
-	else if (userCommand == "inventory")
+	else if (userCommand == "inventory")	//
 	{
 
 	}
@@ -139,6 +161,8 @@ void fightingCommands()
 	{
 		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << std::endl;
 	}
+
+
 }
 
 int main()

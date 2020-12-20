@@ -31,3 +31,51 @@ characterObject::characterObject()
 characterObject::~characterObject()
 {
 }
+
+characterObject monsterCreateGoblin()
+{
+	characterObject goblin;
+	goblin.stats.attack = 2;
+	goblin.stats.health = 10;
+	goblin.stats.defense = 0;
+	goblin.stats.maxHealth = 10;
+	goblin.stats.weak = -1;
+	return goblin;
+}
+
+characterObject monsterCreateLizardman()
+{
+	characterObject lizardman;
+	lizardman.stats.health = 18;
+	lizardman.stats.attack = 5;
+	lizardman.stats.defense = 2;
+	lizardman.stats.maxHealth = 18;
+	lizardman.stats.weak = 1;
+	return lizardman;
+}
+
+characterObject monsterCreateGrowler()
+{
+	characterObject growler;
+	growler.stats.health = 25;
+	growler.stats.attack = 10;
+	growler.stats.defense = 5;
+	growler.stats.maxHealth = 25;
+	growler.stats.weak = 2;
+	return growler;
+}
+
+characterObject monsterCreateGhost()
+{
+	characterObject
+}
+
+characterObject monsterCreateSpecter()
+{
+
+}
+
+characterObject monsterCreateDragon()
+{
+
+}
