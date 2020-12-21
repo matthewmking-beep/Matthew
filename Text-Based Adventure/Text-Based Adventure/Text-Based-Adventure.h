@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "Character.h"
 #include "Environment.h"
 #include "Item.h"
@@ -16,7 +17,7 @@ std::string userCommand;
 
 //Command lists
 std::string exploringCommandList[10];
-std::string fightingCommandList[5];
+std::string fightingCommandList[6];
 
 //Environment Array
 EnvironmentObject environmentArray[5];
@@ -29,6 +30,10 @@ characterObject Player;
 characterObject monsterList[6];
 
 characterObject currentMonster;
+
+//Combat Variables
+bool playerIsBlocking;
+bool monsterIsBlocking;
 
 //Functions
 void initialSetup();

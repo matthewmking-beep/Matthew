@@ -7,7 +7,7 @@ std::string characterObject::talk()
 
 int characterObject::dealDamage()
 {
-	return stats.attack; // add equipped weapon attack too
+	return stats.attack + inventory.equippedWeapon.effectValue; // add equipped weapon attack too
 }
 
 void characterObject::heal(int healing)
@@ -67,15 +67,21 @@ characterObject monsterCreateGrowler()
 
 characterObject monsterCreateGhost()
 {
-	characterObject
+	characterObject ghost;
+
+	return ghost;
 }
 
 characterObject monsterCreateSpecter()
 {
+	characterObject specter;
 
+	return specter;
 }
 
 characterObject monsterCreateDragon()
 {
+	characterObject dragon;
 
+	return dragon;
 }

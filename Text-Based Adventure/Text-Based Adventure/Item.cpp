@@ -1,5 +1,14 @@
 #include "Item.h"
 
+/*
+Item ID Key
+1 = Weapon
+2 = Armour
+3 = Healing Item
+4 = Damage Item
+5 = Quest Item
+*/
+
 itemObject IronSwordCreator() {
 	itemObject IronSword;
 
@@ -40,6 +49,7 @@ itemObject FirecrackerCreator() {
 	Firecracker.name = "Firecracker";
 	Firecracker.effectValue = 10;	//does 10 damage
 	Firecracker.value = 8;
+	return Firecracker;
 }
 
 itemObject WhittledKeyCreator() {

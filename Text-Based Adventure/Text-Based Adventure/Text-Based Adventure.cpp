@@ -10,6 +10,11 @@ void initialSetup()
 	isExploring = true;
 	hasWon = false;
 	userCommand = "list";
+
+	playerIsBlocking = false;
+	monsterIsBlocking = false;
+
+	srand(time(0));
 	
 	//All exploring commands
 	exploringCommandList[0] = "list";
@@ -28,8 +33,9 @@ void initialSetup()
 	fightingCommandList[0] = "list";
 	fightingCommandList[1] = "attack";
 	fightingCommandList[2] = "block";
-	fightingCommandList[3] = "run";
-	fightingCommandList[4] = "endgame";
+	fightingCommandList[3] = "item";
+	fightingCommandList[4] = "run";
+	fightingCommandList[5] = "endgame";
 
 	//Create All Environments
 	environmentArray[0] = TownCreator();
@@ -80,15 +86,22 @@ void exploringCommands()
 	else if (userCommand == "talk") //Talks to NPC
 	{
 		cout << "Who would you like to talk to?" << endl;
-		for (int i = 0; i < environmentArray[currentEnvironment].NPCList->size; i++)
+		for (int i = 0; i < (sizeof(environmentArray[currentEnvironment].NPCList)/sizeof(environmentArray[currentEnvironment].NPCList[0])); i++)
 		{
 			cout << environmentArray[currentEnvironment].NPCList[i] << endl;
+		}
+
+		cin >> userCommand;
+
+		for (int i = 0; i < (3); i++)
+		{
+			
 		}
 	}
 	else if (userCommand == "move") //moves player to area
 	{
 		std::cout << "Where would you like to go?" << std::endl;
-		for (int i = 0; i < environmentArray[currentEnvironment].moveableLocations->size; i++)
+		for (int i = 0; i < (sizeof(environmentArray[currentEnvironment].moveableLocations)/sizeof(environmentArray[currentEnvironment].moveableLocations[0])); i++)
 		{
 			std::cout << environmentArray[i].moveableLocations[i] << std::endl;
 		}
@@ -133,6 +146,8 @@ void exploringCommands()
 
 void fightingCommands()
 {
+	playerIsBlocking = false;
+
 	if (userCommand == "list")
 	{
 		std::cout << "Here are all the available commands: " << std::endl;
@@ -143,15 +158,24 @@ void fightingCommands()
 	}
 	else if (userCommand == "fight")
 	{
+		int damage = -Player.dealDamage();
+		if (monsterIsBlocking)
+		{
+			damage = damage / 2;
+		}
+		currentMonster.heal(damage);
+
+		cout << "You dealt " + to_string(damage) + " points of damage!  The monster is at " + to_string(currentMonster.stats.health) + "health points." << endl;
 
 	}
 	else if (userCommand == "block")
 	{
-
+		cout << "You ready yourself for a blow.  Damage is halved." << endl;
+		playerIsBlocking = true;
 	}
 	else if (userCommand == "run")
 	{
-
+		
 	}
 	else if (userCommand == "endgame")
 	{
@@ -159,10 +183,10 @@ void fightingCommands()
 	}
 	else
 	{
-		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << std::endl;
+		cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << endl;
 	}
 
-
+	enemyAI();
 }
 
 int main()
