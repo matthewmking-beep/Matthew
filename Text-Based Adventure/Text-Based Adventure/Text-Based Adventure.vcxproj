@@ -154,6 +154,7 @@
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Quest.cpp" />
     <ClCompile Include="Text-Based Adventure.cpp" />
   </ItemGroup>
   <ItemGroup>

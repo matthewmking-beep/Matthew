@@ -49,6 +49,7 @@ itemObject FirecrackerCreator() {
 	Firecracker.name = "Firecracker";
 	Firecracker.effectValue = 10;	//does 10 damage
 	Firecracker.value = 8;
+
 	return Firecracker;
 }
 

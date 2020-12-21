@@ -27,7 +27,7 @@ EnvironmentObject ForestCreator() {
 	Forest.interactable[0] = "Hollowed Tree";
 	Forest.interactable[1] = "Hallowed Tree";
 	Forest.interactable[2] = "Rock Formation";
-	Forest.NPCList[0] = "Mysterious Hunter";
+	Forest.NPCList[0] = "Hunter";
 	Forest.puzzleSolution = "Whittled Key";
 	Forest.monsterList[0] = "Goblin";
 	Forest.monsterList[1] = "Wolf";

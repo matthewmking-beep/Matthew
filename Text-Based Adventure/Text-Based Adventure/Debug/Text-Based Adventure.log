@@ -1,3 +1,2 @@
-﻿  Text-Based Adventure.cpp
-c:\users\trifo\documents\github\software-design-final-project\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Text-Based Adventure.vcxproj -> C:\Users\Trifo\Documents\GitHub\Software-Design-Final-Project\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
+﻿  Environment.cpp
+  Text-Based Adventure.vcxproj -> C:\Users\natal\Documents\GitHub\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
