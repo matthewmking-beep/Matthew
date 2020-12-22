@@ -120,7 +120,7 @@ void exploringCommands()
 	}
 	else if (userCommand == "inventory")	//
 	{
-
+		Inventory();
 	}
 	else if (userCommand == "use")
 	{

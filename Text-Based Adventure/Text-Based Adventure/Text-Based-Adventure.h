@@ -2,8 +2,10 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <vector>
 #include "Character.h"
 #include "Environment.h"
+#include "Inventory.h"
 #include "Item.h"
 #include "Quest.h"
 using namespace std;

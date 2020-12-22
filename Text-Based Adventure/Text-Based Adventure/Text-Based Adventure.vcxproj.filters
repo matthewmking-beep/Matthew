@@ -30,6 +30,9 @@
     <ClCompile Include="Quest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Text-Based-Adventure.h">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Quest.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
