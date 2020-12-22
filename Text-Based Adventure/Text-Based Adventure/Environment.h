@@ -14,6 +14,7 @@ public:
 	std::string puzzleSolution;
 	std::string monsterList[4];
 	itemObject pickUpItem;
+	bool pickedUp;
 
 	EnvironmentObject();
 	~EnvironmentObject();

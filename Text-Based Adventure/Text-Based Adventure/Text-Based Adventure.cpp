@@ -82,9 +82,20 @@ void exploringCommands()
 	{
 		std::cout << environmentArray[currentEnvironment].description << std::endl;
 	}
-	else if (userCommand == "inspect") //Inspects objects of interest
+	else if (userCommand == "inspect") //Inspects and picks up objects of interest
 	{
-		AddItem(environmentArray[currentEnvironment].pickUpItem);
+		std::cout << "You look around and find a ";
+
+		if (currentEnvironment == 0 && environmentArray[0].pickedUp == false)
+		{
+			AddItem(environmentArray[0].pickUpItem);
+			environmentArray[0].pickedUp = true;
+		}
+		else if (currentEnvironment == 1 && environmentArray[1].pickedUp == false)
+		{
+			AddItem(environmentArray[1].pickUpItem);
+			environmentArray[1].pickedUp = true;
+		}
 
 		std::cout << environmentArray[currentEnvironment].pickUpItem.name << std::endl;
 	}

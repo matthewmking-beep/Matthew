@@ -16,6 +16,7 @@ EnvironmentObject TownCreator() {
 	Town.NPCList[2] = "Child";
 
 	Town.pickUpItem = HealthPotCreator();
+	Town.pickedUp = false;
 
 	return Town;
 }
@@ -34,6 +35,9 @@ EnvironmentObject ForestCreator() {
 	Forest.monsterList[0] = "Goblin";
 	Forest.monsterList[1] = "Wolf";
 	
+	Forest.pickUpItem = WhittledKeyCreator();
+	Forest.pickedUp = false;
+
 	return Forest;
 }
 

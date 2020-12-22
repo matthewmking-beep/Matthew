@@ -1,6 +1,3 @@
-﻿  Inventory.cpp
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\inventory.cpp(14): warning C4018: '<': signed/unsigned mismatch
-  Text-Based Adventure.cpp
+﻿  Text-Based Adventure.cpp
 c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
   Text-Based Adventure.vcxproj -> C:\Users\natal\Documents\GitHub\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
