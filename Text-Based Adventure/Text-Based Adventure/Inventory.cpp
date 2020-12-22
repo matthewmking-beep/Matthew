@@ -1,18 +1,23 @@
 #include "Inventory.h"
-#include "Item.h"
 
 //invArray[] = IronSwordCreator();
 
-std::vector <std::string> inv;
+std::vector <itemObject> inv;
+
+void StartInv() {
+	inv.push_back(IronSwordCreator());
+	inv.push_back(RustyShieldCreator());
+}
+
 
 void Inventory() {
-
-	inv.push_back(IronSwordCreator().name);
-	inv.push_back(RustyShieldCreator().name);
-
 	for (int i = 0; i < inv.size(); i++)
 	{
-		std::cout << inv[i] << std::endl;
-
+		std::cout << inv[i].name << std::endl;
 	}
+}
+
+void AddItem(itemObject item) {
+	inv.push_back(item);
+
 }

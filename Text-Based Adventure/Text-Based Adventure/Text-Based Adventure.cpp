@@ -51,6 +51,9 @@ void initialSetup()
 	monsterList[3] = monsterCreateGhost();
 	monsterList[4] = monsterCreateSpecter();
 	monsterList[5] = monsterCreateDragon();
+
+	//Create Inventory setup
+	StartInv();
 }
 
 void startCombat(characterObject monster)
@@ -81,7 +84,9 @@ void exploringCommands()
 	}
 	else if (userCommand == "inspect") //Inspects objects of interest
 	{
+		AddItem(environmentArray[currentEnvironment].pickUpItem);
 
+		std::cout << environmentArray[currentEnvironment].pickUpItem.name << std::endl;
 	}
 	else if (userCommand == "talk") //Talks to NPC
 	{
@@ -118,7 +123,7 @@ void exploringCommands()
 //		std::cout << currentEnvironment;
 		std::cout << "You go to the " << environmentArray[currentEnvironment].moveableLocations[currentEnvironment] << std::endl;
 	}
-	else if (userCommand == "inventory")	//
+	else if (userCommand == "inventory")	//opens inventory list
 	{
 		Inventory();
 	}

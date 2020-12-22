@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Item.h"
 
 class EnvironmentObject
 {
@@ -12,6 +13,7 @@ public:
 	std::string NPCList[3];
 	std::string puzzleSolution;
 	std::string monsterList[4];
+	itemObject pickUpItem;
 
 	EnvironmentObject();
 	~EnvironmentObject();

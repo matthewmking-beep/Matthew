@@ -15,6 +15,8 @@ EnvironmentObject TownCreator() {
 	Town.NPCList[1] = "Elder";
 	Town.NPCList[2] = "Child";
 
+	Town.pickUpItem = HealthPotCreator();
+
 	return Town;
 }
 
