@@ -248,7 +248,8 @@ void fightingCommands()
 		Inventory();
 
 		cin >> userCommand;
-
+		//Meant to look through items, check if it's combat, and then use and delete if so.
+		/*
 		for (int i = 0; i < inv.size(); i++)
 		{
 			if (inv[i].name == userCommand)
@@ -257,7 +258,6 @@ void fightingCommands()
 				{
 				case 3:
 					Player.heal(inv[i].effectValue);
-
 					cout << "You heal " + to_string(inv[i].effectValue) + "health points.  Your health is now " + to_string(Player.stats.health) + "." << endl;
 					break;
 				case 4:
@@ -275,6 +275,7 @@ void fightingCommands()
 				}
 			}
 		}
+		*/
 	}
 	else if (userCommand == "endgame")
 	{
