@@ -7,3 +7,6 @@
 void StartInv();
 void Inventory();
 void AddItem(itemObject);
+void UseItem();
+
+std::vector <itemObject> ReturnItems();

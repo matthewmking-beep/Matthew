@@ -149,7 +149,7 @@ void exploringCommands()
 				currentEnvironment = i;
 			}
 		}
-//		std::cout << currentEnvironment;
+
 		std::cout << "You go to the " << environmentArray[currentEnvironment].moveableLocations[currentEnvironment] << std::endl;
 	}
 	else if (userCommand == "inventory")	//opens inventory list
@@ -158,7 +158,8 @@ void exploringCommands()
 	}
 	else if (userCommand == "use")
 	{
-
+		UseItem();
+		std::cout << "Item used" << endl;
 	}
 	else if (userCommand == "equip")
 	{
