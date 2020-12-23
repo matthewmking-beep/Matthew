@@ -39,7 +39,9 @@ bool monsterIsBlocking;
 
 //Functions
 void initialSetup();
+void setupPlayer();
 void startCombat(characterObject monster);
 void enemyAI();
 void exploringCommands();
 void fightingCommands();
+void endCombat();

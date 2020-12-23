@@ -67,6 +67,11 @@ void enemyAI()
 	
 }
 
+void endCombat()
+{
+
+}
+
 void exploringCommands()
 {
 	//I realize now that I cannot use a switch statement for strings... I am sad...
@@ -171,6 +176,7 @@ void fightingCommands()
 		{
 			std::cout << fightingCommandList[i] << std::endl;
 		}
+		return;  //Don't want the enemy attacking just because the player asked on what to do.
 	}
 	else if (userCommand == "fight")
 	{
@@ -180,6 +186,11 @@ void fightingCommands()
 			damage = damage / 2;
 		}
 		currentMonster.heal(damage);
+
+		if (currentMonster.stats.health <= 0)
+		{
+
+		}
 
 		cout << "You dealt " + to_string(damage) + " points of damage!  The monster is at " + to_string(currentMonster.stats.health) + "health points." << endl;
 
@@ -196,10 +207,12 @@ void fightingCommands()
 	else if (userCommand == "endgame")
 	{
 		isPlaying = false;
+		return;	//No sense in making them wait
 	}
 	else
 	{
 		cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << endl;
+		return;	//Don't want the enemy attacking for a mistype
 	}
 
 	enemyAI();

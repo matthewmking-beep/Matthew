@@ -7,6 +7,7 @@ using namespace std;
 struct combatData
 {
 	int level;
+	int exp;
 	int maxHealth;
 	int health;
 	int attack;
