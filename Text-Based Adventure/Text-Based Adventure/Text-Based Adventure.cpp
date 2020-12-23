@@ -80,7 +80,7 @@ void startCombat(characterObject monster)
 
 void enemyAI()
 {
-	
+	//Okay, so the enemy can do 3 actions, block, attack, or use their ability.
 }
 
 bool endCombat()
@@ -338,13 +338,13 @@ int main()
 	//Sets up the locations and characters, etc.
 	initialSetup();
 	//Put opening blurb here.
-	std::cout << "Welcome to 'The Castle of Mystery' text-based adventure.  In this game, you must solve puzzles, and battle monsters to try and find out what happened to the mysterious castle on the hill.\n" << std::endl;
+	cout << "Welcome to 'The Castle of Mystery' text-based adventure.  In this game, you must solve puzzles, and battle monsters to try and find out what happened to the mysterious castle on the hill.\n" << endl;
 
 	exploringCommands();
 
 	do
 	{
-		std::cin >> userCommand;
+		cin >> userCommand;
 		if (isExploring)
 		{
 			exploringCommands();
