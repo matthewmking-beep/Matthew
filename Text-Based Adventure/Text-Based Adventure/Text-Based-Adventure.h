@@ -46,4 +46,4 @@ void startCombat(characterObject monster);
 void enemyAI();
 void exploringCommands();
 void fightingCommands();
-void endCombat();
+bool endCombat();

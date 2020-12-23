@@ -41,6 +41,8 @@ characterObject monsterCreateGoblin()
 	goblin.stats.defense = 0;
 	goblin.stats.maxHealth = 10;
 	goblin.stats.weak = -1;
+	goblin.stats.exp = 2;
+	goblin.stats.level = 1;
 	return goblin;
 }
 
@@ -69,14 +71,18 @@ characterObject monsterCreateGrowler()
 characterObject monsterCreateGhost()
 {
 	characterObject ghost;
-
+	ghost.stats.health = 15;
+	ghost.stats.attack = 6;
+	ghost.stats.defense = 0;
+	ghost.stats.maxHealth = 15;
+	ghost.stats.weak = 3;
 	return ghost;
 }
 
 characterObject monsterCreateSpecter()
 {
 	characterObject specter;
-
+	
 	return specter;
 }
 

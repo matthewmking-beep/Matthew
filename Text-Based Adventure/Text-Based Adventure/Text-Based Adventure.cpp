@@ -48,6 +48,8 @@ void initialSetup()
 	fightingCommandList[4] = "run";
 	fightingCommandList[5] = "endgame";
 
+	//Set Exp Goals
+
 	//Create All Environments
 	environmentArray[0] = TownCreator();
 	environmentArray[1] = ForestCreator();
@@ -81,9 +83,24 @@ void enemyAI()
 	
 }
 
-void endCombat()
+bool endCombat()
 {
+	if (currentMonster.stats.health <= 0)
+	{
+		cout << "You have defeated the monster!  You gain " + to_string(currentMonster.stats.level) + " exp points." << endl;
 
+		//exp and level up
+		Player.stats.exp += currentMonster.stats.exp;
+		if (Player.stats.exp >= expAmountArray[Player.stats.level - 1])
+		{
+			Player.stats.exp -= expAmountArray[Player.stats.level - 1];
+			Player.levelUp();
+			cout << "You've leveled up!  Your attack has increased to " + to_string(Player.stats.attack) + " and your defense has increased to " + to_string(Player.stats.defense) + "." << endl;
+		}
+		isExploring = true;
+		return true;
+	}
+	return false;
 }
 
 void exploringCommands()
@@ -200,19 +217,9 @@ void fightingCommands()
 		}
 		currentMonster.heal(damage);
 
-		if (currentMonster.stats.health <= 0)
+		if (endCombat())
 		{
-			cout << "You have defeated the monster!  You gain " + to_string(currentMonster.stats.level) + " exp points." << endl;
-
-			//exp and level up
-			Player.stats.exp += currentMonster.stats.level;
-			if (Player.stats.exp >= expAmountArray[Player.stats.level - 1])
-			{
-				Player.stats.exp -= expAmountArray[Player.stats.level - 1];
-				Player.levelUp();
-				cout << "You've leveled up!  Your attack has increased to " + to_string(Player.stats.attack) + " and your defense has increased to " + to_string(Player.stats.defense) + "." << endl;
-			}
-
+			return;
 		}
 
 		cout << "You dealt " + to_string(damage) + " points of damage!  The monster is at " + to_string(currentMonster.stats.health) + "health points." << endl;
@@ -225,7 +232,13 @@ void fightingCommands()
 	}
 	else if (userCommand == "run")
 	{
-		
+		int chance = (Player.stats.level - currentMonster.stats.level);
+		int success = rand() % 10;
+		if ((chance + success) > 5 || chance > 4)
+		{
+			cout << "You gave the monster the slip!  No exp though..." << endl;
+			isExploring = true;
+		}
 	}
 	else if (userCommand == "item")
 	{
@@ -235,7 +248,32 @@ void fightingCommands()
 
 		cin >> userCommand;
 
+		for (int i = 0; i < inv.size(); i++)
+		{
+			if (inv[i].name == userCommand)
+			{
+				switch (inv[i].IDType)
+				{
+				case 3:
+					Player.heal(inv[i].effectValue);
 
+					cout << "You heal " + to_string(inv[i].effectValue) + "health points.  Your health is now " + to_string(Player.stats.health) + "." << endl;
+					break;
+				case 4:
+					currentMonster.heal(-inv[i].effectValue);
+					if (endCombat())
+					{
+						return;
+					}
+					cout << "The monster takes " + to_string(inv[i].effectValue) + "damage.  It's health is now " + to_string(currentMonster.stats.health) + "." << endl;
+					break;
+				default:
+					cout << "This item is not a combat item.  It cannot be used" << endl;
+					return;
+					break;
+				}
+			}
+		}
 	}
 	else if (userCommand == "endgame")
 	{
