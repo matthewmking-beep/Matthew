@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Item.h"
+#include "Character.h"
 
 class EnvironmentObject
 {
@@ -10,7 +11,7 @@ public:
 	std::string moveableLocations[3];
 	std::string description;
 	std::string interactable[5];
-	std::string NPCList[3];
+	NpcObject NPCList[3];
 	std::string puzzleSolution;
 	std::string monsterList[4];
 	itemObject pickUpItem;

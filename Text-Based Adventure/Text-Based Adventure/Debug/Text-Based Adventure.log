@@ -1,14 +1,7 @@
-﻿  Inventory.cpp
-<<<<<<< Updated upstream
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\inventory.cpp(11): warning C4018: '<': signed/unsigned mismatch
-=======
-c:\users\trifo\documents\github\software-design-final-project\software-design-final-project\text-based adventure\text-based adventure\inventory.cpp(11): warning C4018: '<': signed/unsigned mismatch
->>>>>>> Stashed changes
-  Text-Based Adventure.cpp
+﻿  Text-Based Adventure.cpp
 c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(180): warning C4018: '<': signed/unsigned mismatch
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(190): warning C4018: '<': signed/unsigned mismatch
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(205): warning C4018: '<': signed/unsigned mismatch
-c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(215): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(203): warning C4018: '<': signed/unsigned mismatch
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(213): warning C4018: '<': signed/unsigned mismatch
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(228): warning C4018: '<': signed/unsigned mismatch
+c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(317): warning C4018: '<': signed/unsigned mismatch
   Text-Based Adventure.vcxproj -> C:\Users\natal\Documents\GitHub\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe

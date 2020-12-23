@@ -53,3 +53,21 @@ characterObject monsterCreateGrowler();
 characterObject monsterCreateGhost();
 characterObject monsterCreateSpecter();
 characterObject monsterCreateDragon();
+
+//NPC class
+class NpcObject
+{
+public:
+	std::string name;
+	std::string introText;
+	bool optionsClosed;
+	std::string optionExplain;
+	std::string optionYes;
+	std::string optionNo;
+	itemObject GivenItem;
+	bool GivenUp;
+
+	NpcObject();
+	~NpcObject();
+};
+NpcObject villagerCreator();

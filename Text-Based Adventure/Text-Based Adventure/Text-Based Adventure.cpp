@@ -139,14 +139,37 @@ void exploringCommands()
 		cout << "Who would you like to talk to?" << endl;
 		for (int i = 0; i < (sizeof(environmentArray[currentEnvironment].NPCList)/sizeof(environmentArray[currentEnvironment].NPCList[0])); i++)
 		{
-			cout << environmentArray[currentEnvironment].NPCList[i] << endl;
+			cout << environmentArray[currentEnvironment].NPCList[i].name << endl;
 		}
 
 		cin >> userCommand;
 
-		for (int i = 0; i < (3); i++)
+		for (int i = 0; i < (sizeof(environmentArray[currentEnvironment].NPCList) / sizeof(environmentArray[currentEnvironment].NPCList[0])); i++)
 		{
-			
+			if (userCommand == environmentArray[currentEnvironment].NPCList[i].name)
+			{
+				cout << environmentArray[currentEnvironment].NPCList[i].introText << endl;
+				if (environmentArray[currentEnvironment].NPCList[i].optionsClosed == false)
+				{
+					std::cout << environmentArray[currentEnvironment].NPCList[i].optionExplain << "\n(yes or no?)" << endl;
+
+					std::cin >> userCommand;
+					if (userCommand == "yes")
+					{
+						AddItem(environmentArray[currentEnvironment].NPCList[i].GivenItem);
+
+						std::cout << environmentArray[currentEnvironment].NPCList[i].optionYes << std::endl;
+						std::cout << "You received a " << environmentArray[currentEnvironment].NPCList[i].GivenItem.name << endl;
+
+						environmentArray[currentEnvironment].NPCList[i].GivenUp = true;
+						environmentArray[currentEnvironment].NPCList[i].optionsClosed = true;
+					}
+					else
+					{
+						std::cout << environmentArray[currentEnvironment].NPCList[i].optionNo << endl;
+					}
+				}
+			}
 		}
 	}
 	else if (userCommand == "move") //moves player to area

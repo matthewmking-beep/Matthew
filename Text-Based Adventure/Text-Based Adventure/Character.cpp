@@ -92,3 +92,27 @@ characterObject monsterCreateDragon()
 
 	return dragon;
 }
+
+//NPC Creators
+NpcObject villagerCreator() 
+{
+	NpcObject villager;
+
+	villager.name = "Villager";
+	villager.introText = "Greetings traveller! Haven't seen you around these parts before.";
+	villager.optionsClosed = false;
+	villager.optionExplain = "Would you like this?";
+	villager.optionYes = "Here ya go";
+	villager.optionNo = "ok then";
+	villager.GivenItem = FirecrackerCreator();
+	villager.GivenUp = false;
+
+	return villager;
+}
+
+NpcObject::NpcObject()
+{
+}
+NpcObject::~NpcObject()
+{
+}
