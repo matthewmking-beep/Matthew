@@ -91,18 +91,17 @@ void exploringCommands()
 	{
 		std::cout << "You look around and find a ";
 
-		if (currentEnvironment == 0 && environmentArray[0].pickedUp == false)
+		if (environmentArray[currentEnvironment].pickedUp == false)
 		{
-			AddItem(environmentArray[0].pickUpItem);
-			environmentArray[0].pickedUp = true;
-		}
-		else if (currentEnvironment == 1 && environmentArray[1].pickedUp == false)
-		{
-			AddItem(environmentArray[1].pickUpItem);
-			environmentArray[1].pickedUp = true;
-		}
+			AddItem(environmentArray[currentEnvironment].pickUpItem);
+			environmentArray[currentEnvironment].pickedUp = true;
 
-		std::cout << environmentArray[currentEnvironment].pickUpItem.name << std::endl;
+			std::cout << environmentArray[currentEnvironment].pickUpItem.name << std::endl;
+		}
+		else
+		{
+			std::cout << "plain old leaf; nothing of value" << std::endl;
+		}
 	}
 	else if (userCommand == "talk") //Talks to NPC
 	{
