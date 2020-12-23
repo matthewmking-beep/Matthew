@@ -159,7 +159,7 @@ void exploringCommands()
 
 		std::cin >> userCommand;
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < (sizeof(environmentArray[currentEnvironment].moveableLocations) / sizeof(environmentArray[currentEnvironment].moveableLocations[0])); i++)
 		{
 			if (userCommand == environmentArray[i].moveableLocations[i])
 			{
@@ -175,12 +175,54 @@ void exploringCommands()
 	}
 	else if (userCommand == "use")
 	{
-		UseItem();
-		std::cout << "Item used" << endl;
+		std::cout << "Which item would you like to use?" << endl;
+
+		for (int i = 0; i < ReturnItems().size(); i++)		//lists useable items
+		{
+			if (ReturnItems()[i].IDType == 3 || ReturnItems()[i].IDType == 4 || ReturnItems()[i].IDType == 5)
+			{
+				std::cout << ReturnItems()[i].name << std::endl;
+			}
+		}
+
+		std::cin >> userCommand;
+
+		for (int i = 0; i < ReturnItems().size(); i++)		//compares user input to items
+		{
+			if (userCommand.compare(ReturnItems()[i].name))
+			{
+				if (ReturnItems()[i].IDType == 3 || ReturnItems()[i].IDType == 4 || ReturnItems()[i].IDType == 5)
+				{
+					UseItem(i);
+				}
+			}
+		}
 	}
 	else if (userCommand == "equip")
 	{
+		std::cout << "Which item would you like to equip?" << endl;
 
+		for (int i = 0; i < ReturnItems().size(); i++)		//lists equipable items
+		{
+			if (ReturnItems()[i].IDType == 1 || ReturnItems()[i].IDType == 2)
+			{
+				std::cout << ReturnItems()[i].name << std::endl;
+			}
+		}
+/*
+		std::cin >> userCommand;
+
+		for (int i = 0; i < ReturnItems().size(); i++)
+		{
+			if (userCommand.compare(ReturnItems()[i].name))
+			{
+				if (ReturnItems()[i].IDType == 1 || ReturnItems()[i].IDType == 2)
+				{
+					EquipItem(i);
+				}
+			}
+		}
+*/
 	}
 	else if (userCommand == "quest")
 	{
@@ -192,7 +234,7 @@ void exploringCommands()
 	}
 	else
 	{
-		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << std::endl;
+		std::cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands are case sensitive." << std::endl;
 	}
 }
 
@@ -284,7 +326,7 @@ void fightingCommands()
 	}
 	else
 	{
-		cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands must be in all lowercase." << endl;
+		cout << "Not a recognized command.  Input 'list' to list all commands.  Remember, all commands are case sensitive." << endl;
 		return;	//Don't want the enemy attacking for a mistype
 	}
 

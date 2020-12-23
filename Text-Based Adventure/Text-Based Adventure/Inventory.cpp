@@ -14,14 +14,20 @@ void Inventory() {
 	}
 }
 
-std::vector <itemObject> ReturnItems() {
-	return inv;
-}
-
 void AddItem(itemObject item) {
 	inv.push_back(item);
 }
 
-void UseItem() {
-	inv.erase(inv.begin() + 2);
+void UseItem(int i) {
+	std::cout << inv[i].name << " used" << std::endl;
+
+	inv.erase(inv.begin() + i);
+}
+
+void EquipItem(int i) {
+	std::cout << inv[i].name << " equipped" << std::endl;
+}
+
+std::vector <itemObject> ReturnItems() {
+	return inv;
 }

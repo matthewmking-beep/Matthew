@@ -9,6 +9,7 @@
 void StartInv();
 void Inventory();
 void AddItem(itemObject);
-void UseItem();
+void UseItem(int);
+void EquipItem(int);
 
 std::vector <itemObject> ReturnItems();

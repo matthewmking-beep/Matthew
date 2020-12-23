@@ -8,7 +8,7 @@ public:
 	int IDType;
 
 /*				
-				1 = EquipableWeapon
+				1 = Equipable Weapon
 				2 = Equipable Armour
 				3 = Healing Item
 				4 = Damaging Item
