@@ -37,6 +37,8 @@ characterObject currentMonster;
 bool playerIsBlocking;
 bool monsterIsBlocking;
 
+int expAmountArray[10];
+
 //Functions
 void initialSetup();
 void setupPlayer();

@@ -22,6 +22,7 @@ int characterObject::run()
 
 void characterObject::levelUp()
 {
+	stats.level += 1;
 }
 
 characterObject::characterObject()

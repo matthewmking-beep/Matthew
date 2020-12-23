@@ -4,6 +4,17 @@
 #include "Text-Based-Adventure.h"
 
 
+void setupPlayer()
+{
+	//Setting Up Stats
+	Player.stats.level = 1;
+	Player.stats.attack = 1;
+	Player.stats.defense = 1;
+	Player.stats.exp = 0;
+	Player.stats.maxHealth = 10;
+	Player.stats.health = 10;
+}
+
 void initialSetup()
 {
 	isPlaying = true;
@@ -54,6 +65,9 @@ void initialSetup()
 
 	//Create Inventory setup
 	StartInv();
+
+	//Set up player stats
+	setupPlayer();
 }
 
 void startCombat(characterObject monster)
@@ -189,6 +203,16 @@ void fightingCommands()
 
 		if (currentMonster.stats.health <= 0)
 		{
+			cout << "You have defeated the monster!  You gain " + to_string(currentMonster.stats.level) + " exp points." << endl;
+
+			//exp and level up
+			Player.stats.exp += currentMonster.stats.level;
+			if (Player.stats.exp >= expAmountArray[Player.stats.level - 1])
+			{
+				Player.stats.exp -= expAmountArray[Player.stats.level - 1];
+				Player.levelUp();
+				cout << "You've leveled up!  Your attack has increased to " + to_string(Player.stats.attack) + " and your defense has increased to " + to_string(Player.stats.defense) + "." << endl;
+			}
 
 		}
 
@@ -203,6 +227,16 @@ void fightingCommands()
 	else if (userCommand == "run")
 	{
 		
+	}
+	else if (userCommand == "item")
+	{
+		cout << "What item would you like to use?" << endl;
+
+		Inventory();
+
+		cin >> userCommand;
+
+
 	}
 	else if (userCommand == "endgame")
 	{
