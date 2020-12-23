@@ -291,24 +291,23 @@ void fightingCommands()
 
 		cin >> userCommand;
 		//Meant to look through items, check if it's combat, and then use and delete if so.
-		/*
-		for (int i = 0; i < inv.size(); i++)
+		for (int i = 0; i < ReturnItems().size(); i++)
 		{
-			if (inv[i].name == userCommand)
+			if (ReturnItems()[i].name == userCommand)
 			{
-				switch (inv[i].IDType)
+				switch (ReturnItems()[i].IDType)
 				{
 				case 3:
-					Player.heal(inv[i].effectValue);
-					cout << "You heal " + to_string(inv[i].effectValue) + "health points.  Your health is now " + to_string(Player.stats.health) + "." << endl;
+					Player.heal(ReturnItems()[i].effectValue);
+					cout << "You heal " + to_string(ReturnItems()[i].effectValue) + "health points.  Your health is now " + to_string(Player.stats.health) + "." << endl;
 					break;
 				case 4:
-					currentMonster.heal(-inv[i].effectValue);
+					currentMonster.heal(-ReturnItems()[i].effectValue);
 					if (endCombat())
 					{
 						return;
 					}
-					cout << "The monster takes " + to_string(inv[i].effectValue) + "damage.  It's health is now " + to_string(currentMonster.stats.health) + "." << endl;
+					cout << "The monster takes " + to_string(ReturnItems()[i].effectValue) + "damage.  It's health is now " + to_string(currentMonster.stats.health) + "." << endl;
 					break;
 				default:
 					cout << "This item is not a combat item.  It cannot be used" << endl;
@@ -317,7 +316,6 @@ void fightingCommands()
 				}
 			}
 		}
-		*/
 	}
 	else if (userCommand == "endgame")
 	{
