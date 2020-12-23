@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Combat.cpp" />
     <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Combat.h" />
     <ClInclude Include="Environment.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
