@@ -71,3 +71,5 @@ public:
 	~NpcObject();
 };
 NpcObject villagerCreator();
+NpcObject childCreator();
+NpcObject elderCreator();

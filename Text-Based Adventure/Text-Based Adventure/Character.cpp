@@ -98,8 +98,8 @@ NpcObject villagerCreator()
 {
 	NpcObject villager;
 
-	villager.name = "Villager";
-	villager.introText = "Greetings traveller! Haven't seen you around these parts before.";
+	villager.name = "villager";
+	villager.introText = "Greetings traveller! Haven't seen you around these parts before";
 	villager.optionsClosed = false;
 	villager.optionExplain = "Would you like this?";
 	villager.optionYes = "Here ya go";
@@ -108,6 +108,29 @@ NpcObject villagerCreator()
 	villager.GivenUp = false;
 
 	return villager;
+}
+
+NpcObject childCreator() {
+	NpcObject child;
+
+	child.name = "girl";
+	child.introText = "Hiya adventurer! Are you off to kill the dragon at the Castle!? Good luck!";
+	child.optionsClosed = true;
+
+	return child;
+}
+
+NpcObject elderCreator() {
+	NpcObject elder;
+
+	elder.name = "elder";
+	elder.introText = "Ahh, a mighty warrior here to slay the dragon, eh? For the sake of the town, I wish you the best of luck";
+	elder.optionsClosed = true;
+	elder.optionExplain = "it is dangerous to go alone; here, take this";
+//	elder.GivenItem = SWORD
+//	elder.GivenUp = false;
+
+	return elder;
 }
 
 NpcObject::NpcObject()

@@ -212,11 +212,13 @@ void exploringCommands()
 
 		for (int i = 0; i < ReturnItems().size(); i++)		//compares user input to items
 		{
-			if (userCommand.compare(ReturnItems()[i].name))
+			if (userCommand.compare(ReturnItems()[i].name) == 0)
 			{
 				if (ReturnItems()[i].IDType == 3 || ReturnItems()[i].IDType == 4 || ReturnItems()[i].IDType == 5)
 				{
-					UseItem(i);
+					UseItem(ReturnItems()[i]);
+
+					break;
 				}
 			}
 		}

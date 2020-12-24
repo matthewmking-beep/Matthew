@@ -12,7 +12,7 @@ EnvironmentObject TownCreator() {
 	Town.interactable[0] = "Tavern";
 	Town.interactable[1] = "Smithy";
 	Town.NPCList[0] = villagerCreator();
-//	Town.NPCList[1] = "Elder";
+	Town.NPCList[1] = childCreator();
 //	Town.NPCList[2] = "Child";
 
 	Town.pickUpItem = HealthPotCreator();

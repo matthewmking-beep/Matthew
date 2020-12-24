@@ -18,10 +18,17 @@ void AddItem(itemObject item) {
 	inv.push_back(item);
 }
 
-void UseItem(int i) {
-	std::cout << inv[i].name << " used" << std::endl;
+void UseItem(itemObject item) {
+	std::cout << item.name << " used" << std::endl;
 
-	inv.erase(inv.begin() + i);
+	for (int i = 0; i < inv.size(); i++)
+	{
+		if (inv[i].name == item.name)
+		{
+			inv.erase(inv.begin() + i);
+		}
+	}
+	//inv.erase(inv.begin() + i);
 }
 
 void EquipItem(int i) {
