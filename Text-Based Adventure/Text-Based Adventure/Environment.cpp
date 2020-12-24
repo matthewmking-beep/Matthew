@@ -13,7 +13,7 @@ EnvironmentObject TownCreator() {
 	Town.interactable[1] = "Smithy";
 	Town.NPCList[0] = villagerCreator();
 	Town.NPCList[1] = childCreator();
-//	Town.NPCList[2] = "Child";
+	Town.NPCList[2] = elderCreator();
 
 	Town.pickUpItem = HealthPotCreator();
 	Town.pickedUp = false;
@@ -30,7 +30,9 @@ EnvironmentObject ForestCreator() {
 	Forest.interactable[0] = "Hollowed Tree";
 	Forest.interactable[1] = "Hallowed Tree";
 	Forest.interactable[2] = "Rock Formation";
-//	Forest.NPCList[0] = "Hunter";
+	Forest.NPCList[0] = hunterCreator();
+	Forest.NPCList[1] = FoxgirlCreator();
+	Forest.NPCList[2] = MaskedboyCreator();
 	Forest.puzzleSolution = "Whittled Key";
 	Forest.monsterList[0] = "Goblin";
 	Forest.monsterList[1] = "Wolf";

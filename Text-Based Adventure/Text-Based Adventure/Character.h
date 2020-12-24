@@ -73,3 +73,6 @@ public:
 NpcObject villagerCreator();
 NpcObject childCreator();
 NpcObject elderCreator();
+NpcObject hunterCreator();
+NpcObject FoxgirlCreator();
+NpcObject MaskedboyCreator();

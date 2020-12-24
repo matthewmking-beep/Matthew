@@ -27,3 +27,7 @@ public:
 	itemObject HealthPotCreator();
 	itemObject FirecrackerCreator();
 	itemObject WhittledKeyCreator();
+	itemObject SteelSwordCreator();
+
+	itemObject sickness();
+	itemObject tattoo();

@@ -62,6 +62,33 @@ itemObject WhittledKeyCreator() {
 	return WhittledKey;
 }
 
+itemObject SteelSwordCreator() {
+	itemObject SteelSword;
+
+	SteelSword.IDType = 1;
+	SteelSword.name = "Steel Sword";
+	SteelSword.effectValue = 10; //does 10 damage
+	SteelSword.value = 15;
+
+	return SteelSword;
+}
+
+itemObject sickness() {
+	itemObject sickness;
+
+	sickness.name = "sore back and a grumpy morning walk";
+
+	return sickness;
+}
+
+itemObject tattoo() {
+	itemObject tattoo;
+
+	tattoo.name = "funny drawing on your arm";
+
+	return tattoo;
+}
+
 itemObject::itemObject()
 {
 }
