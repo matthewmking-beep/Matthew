@@ -378,4 +378,9 @@ int main()
 		}
 	} while (isPlaying);
 
+	if (hasWon = true)
+	{
+		cout << "Congratulations on winning the game!  You have solved the mystery of the castle!" << endl;
+		system("pause");
+	}
 }

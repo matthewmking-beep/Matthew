@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿  Character.cpp
   Environment.cpp
   Inventory.cpp
@@ -13,3 +14,6 @@ c:\users\natal\documents\github\software-design-final-project\text-based adventu
 c:\users\natal\documents\github\software-design-final-project\text-based adventure\text-based adventure\text-based adventure.cpp(319): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   Text-Based Adventure.vcxproj -> C:\Users\natal\Documents\GitHub\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
+=======
+﻿  Text-Based Adventure.vcxproj -> C:\Users\Trifo\Documents\GitHub\Software-Design-Final-Project\Software-Design-Final-Project\Text-Based Adventure\Debug\Text-Based Adventure.exe
+>>>>>>> Stashed changes

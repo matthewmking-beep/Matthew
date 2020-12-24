@@ -36,60 +36,76 @@ characterObject::~characterObject()
 characterObject monsterCreateGoblin()
 {
 	characterObject goblin;
+	goblin.stats.level = 1;
 	goblin.stats.attack = 2;
 	goblin.stats.health = 10;
 	goblin.stats.defense = 0;
 	goblin.stats.maxHealth = 10;
 	goblin.stats.weak = -1;
 	goblin.stats.exp = 2;
-	goblin.stats.level = 1;
 	return goblin;
 }
 
 characterObject monsterCreateLizardman()
 {
 	characterObject lizardman;
+	lizardman.stats.level = 4;
 	lizardman.stats.health = 18;
-	lizardman.stats.attack = 5;
+	lizardman.stats.attack = 6;
 	lizardman.stats.defense = 2;
 	lizardman.stats.maxHealth = 18;
 	lizardman.stats.weak = 1;
+	lizardman.stats.exp = 10;
 	return lizardman;
 }
 
 characterObject monsterCreateGrowler()
 {
 	characterObject growler;
+	growler.stats.level = 7;
 	growler.stats.health = 25;
-	growler.stats.attack = 10;
-	growler.stats.defense = 5;
+	growler.stats.attack = 4;
+	growler.stats.defense = 10;
 	growler.stats.maxHealth = 25;
 	growler.stats.weak = 2;
+	growler.stats.exp = 25;
 	return growler;
 }
 
 characterObject monsterCreateGhost()
 {
 	characterObject ghost;
+	ghost.stats.level = 5;
 	ghost.stats.health = 15;
 	ghost.stats.attack = 6;
 	ghost.stats.defense = 0;
 	ghost.stats.maxHealth = 15;
 	ghost.stats.weak = 3;
+	ghost.stats.exp = 20;
 	return ghost;
 }
 
 characterObject monsterCreateSpecter()
 {
 	characterObject specter;
-	
+	specter.stats.level = 8;
+	specter.stats.attack = 9;
+	specter.stats.attack = 3;
+	specter.stats.health = specter.stats.maxHealth = 20;
+	specter.stats.weak = 3;
+	specter.stats.exp = 30;
 	return specter;
 }
 
 characterObject monsterCreateDragon()
 {
 	characterObject dragon;
-
+	dragon.stats.level = 10;
+	dragon.stats.attack = 10;
+	dragon.stats.defense = 10;
+	dragon.stats.health = dragon.stats.maxHealth = 30;
+	dragon.stats.weak = 5;
+	dragon.stats.exp = 100;
 	return dragon;
 }
 
